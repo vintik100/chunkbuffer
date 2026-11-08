@@ -1,0 +1,49 @@
+name: "Bug Report"
+description: "File an issue for a bug or unexpected behavior"
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the information below.
+  - type: input
+    id: version
+    attributes:
+      label: "Version / Commit Hash"
+      description: "What version or git commit are you running?"
+      placeholder: "e.g., v1.1.0 or commit abc1234"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: "Environment"
+      description: "Operating system, CPU architecture, Go version"
+      placeholder: "e.g., Linux Ubuntu 24.04 x86_64, Go 1.23"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description & Expected Behavior"
+      description: "Describe the bug and what you expected to happen instead."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Minimal Reproduction Steps"
+      description: "Provide a minimal code snippet or command to reproduce the issue."
+      placeholder: |
+        1. Run `...`
+        2. Call function `...`
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs or Stack Trace"
+      description: "Paste relevant log output or stack traces."
+      render: shell
