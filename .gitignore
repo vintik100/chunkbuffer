@@ -1,0 +1,16 @@
+# Binaries and test output
+*.test
+*.out
+coverage.out
+*.prof
+
+# Editor and OS noise
+.idea/
+.vscode/
+.DS_Store
+
+# Environment & local secrets
+.env
+.env.*
+*.pem
+*.key
